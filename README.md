@@ -194,6 +194,22 @@ Esse método utiliza `DELETE` para excluir uma candidatura pelo seu ID.
 
 O desenvolvimento foi realizado de forma colaborativa entre as integrantes da squad, com as operações do CRUD distribuídas entre as participantes.
 
+### Infraestrutura e CREATE — Inserção de Dados
+
+**Responsável: Maria**
+
+A contribuição consistiu na configuração inicial do projeto e na implementação das funcionalidades de cadastro:
+
+```text
+CadastrarVaga()
+CadastrarCandidata()
+EnviarCandidatura()
+```
+
+Além da implementação do **CREATE** utilizando `INSERT INTO` parametrizado, a responsabilidade abrangeu a criação do repositório, configuração do ambiente no Google Colab, setup inicial do banco de dados (SQLite), estruturação do arquivo `Program.cs` e a configuração das referências do projeto.
+
+---
+
 ### READ — Consultar Candidaturas
 
 **Responsável: Silvia**
@@ -214,6 +230,49 @@ E-mail
 Vaga
 Empresa
 ```
+
+---
+
+### UPDATE — Atualizar Dados
+
+**Responsável: Anna**
+
+A contribuição consistiu na implementação da funcionalidade:
+
+```text
+AtualizarSalarioVaga()
+```
+
+O método utiliza a instrução SQL `UPDATE` para alterar o valor do salário de uma vaga específica. A implementação inclui o uso de parâmetros seguros (`@novoSalario`, `@idVaga`) e a validação através do `ExecuteNonQuery()` para confirmar via console se as linhas foram de fato afetadas no banco de dados.
+
+---
+
+### DELETE — Remoção de Dados
+
+**Responsável: Kênia**
+
+A contribuição consistiu na implementação da funcionalidade:
+
+```text
+CancelarCandidatura()
+```
+
+O método realiza a exclusão de um registro na tabela associativa utilizando a instrução SQL `DELETE`. Através da validação do ID da candidatura, o código executa a remoção e retorna um feedback ao usuário confirmando o cancelamento ou alertando caso a candidatura não seja encontrada.
+
+---
+
+### Testes e Qualidade (QA / SQL)
+
+**Responsável: Danny**
+
+A contribuição consistiu na garantia de qualidade do software e validação do banco de dados:
+
+```text
+Testes das operações de CRUD
+Criação do SQL final
+```
+
+A responsabilidade abrangeu a execução de todos os testes das operações do CRUD integradas ao sistema e a criação e refinamento do script SQL final de consulta, garantindo que a modelagem relacional e a extração de dados funcionassem perfeitamente em conjunto com o código C#.
 
 ---
 
